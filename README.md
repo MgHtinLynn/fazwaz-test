@@ -66,3 +66,9 @@ After setting up for dev server, you can go to access with these URL
 http://localhost/
 OR
 http://localhost/bangkok
+
+## For TDD
+you can run
+```
+php artisan test
+```
