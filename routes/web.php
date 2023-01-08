@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\PropertiesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PropertiesController::class, 'index'])->name('home');
+Route::get('/{province}', [PropertiesController::class, 'listingByProvince'])->name('list-by-province');
